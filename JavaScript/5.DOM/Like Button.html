@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Like  Button</title>
+    <style>
+        #like-unlike{
+            padding: 10px 20px 10px 20px;
+            margin: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: deepskyblue;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="like-unlike">Like</button>
+
+    <script>
+        var buttonChange = document.getElementById('like-unlike');
+
+        buttonChange.addEventListener('click', function () {
+            if(buttonChange.innerText === 'Like') {
+                buttonChange.innerText = 'Unlike';
+            }
+            else {
+                buttonChange.innerText = 'Like';
+            }
+        })
+    </script>
+</body>
+</html>
