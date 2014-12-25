@@ -1,0 +1,73 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="bs-component">
+                <h4>To publish a new add, please login.</h4>
+            </div>
+            <ul class="login-list">
+                <li class="item-login"><a href="#" class="btn btn-primary btn-login">Login</a></li>
+                <li><a href="#" class="btn btn-primary">Register</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 ">
+            <div class="well bs-component">
+                <form class="form-horizontal" name="registerFormName">
+                    <fieldset>
+                        <legend>Legend</legend>
+                        <div class="form-group">
+                            <label for="inputUser" class="col-lg-2 control-label" ng-model="register.username">Username</label>
+                            <div class="col-lg-8">
+                                <input type="text" required="required" class="form-control" id="inputUser" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label" ng-model="register.password">Password</label>
+                            <div class="col-lg-8">
+                                <input type="password" required="required" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" class="col-lg-2 control-label" ng-model="register.confirmpassword">Confirm Password</label>
+                            <div class="col-lg-8">
+                                <input type="password" required="required" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName" class="col-lg-2 control-label" ng-model="register.name">Name</label>
+                            <div class="col-lg-8">
+                                <input type="text" required="required" class="form-control" id="inputName" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label" ng-model="register.email">Email</label>
+                            <div class="col-lg-8">
+                                <input type="text" required="required" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone" class="col-lg-2 control-label" ng-model="register.phone">Phone</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="select" class="col-lg-2 control-label">Town</label>
+                            <div class="col-lg-8">
+                                <select class="form-control" id="select">
+                                    <option ng-repeat="town in towns">{{town.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <button type="submit" ng-disabled="registerFormName.$invalid" class="btn btn-primary" ng-click="registerUser(register, registerFormName)">Register</button>
+                                <a href="#login">Login here</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+            </div>
+        </div>
+    </div>
+</div>

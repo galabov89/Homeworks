@@ -1,0 +1,74 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="bs-component">
+                <h3>To publish a new add, please login.</h3>
+            </div>
+            <ul class="login-list">
+                <li class="item-login"><a href="#" class="btn btn-primary btn-login">Login</a></li>
+                <li><a href="#" class="btn btn-primary">Register</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 ads">
+            <ul>
+                <li class="container-item" ng-repeat="ad in data.ads">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4 class="pull-left">{{ad.title}}</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <span class="pull-right">{{ad.date | date:'d-MMM-yyyy'}} </span>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="image-container">
+                                    <img src="" ng-src={{ad.imageDataUrl}} width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">{{ad.text}}</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <strong>Name: </strong>{{ad.ownerName}}
+                                        </div>
+                                        <div class="row">
+                                            <strong>Email: </strong>{{ad.ownerEmail}}
+                                        </div>
+                                        <div class="row">
+                                            <strong>Phone: </strong>{{ad.ownerPhone}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Categories </h3>
+                    <select class="form-control">
+                        <option>All</option>
+                        <option ng-repeat="category in categories">{{category.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Towns </h3>
+                    <select class="form-control">
+                        <option>All</option>
+                        <option ng-repeat="town in towns">{{town.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.theme.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-app="appModule" ng-controller="MainCtrl">
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="../" class="navbar-brand">My Ads Application</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+            <ul class="nav navbar-nav ">
+                <li><a href="#ads">Ads</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="container" ng-view >
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/main-service.js"></script>
+<script src="js/controllers/main-controller.js"></script>
+</body>
+</html>

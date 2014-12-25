@@ -1,0 +1,43 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="bs-component">
+                <h4>To publish a new add, please login.</h4>
+            </div>
+            <ul class="login-list">
+                <li class="item-login"><a href="#" class="btn btn-primary btn-login">Login</a></li>
+                <li><a href="#" class="btn btn-primary">Register</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 ">
+            <div class="well bs-component">
+                <form class="form-horizontal" name="loginFormName">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div class="form-group">
+                            <label for="inputUser" class="col-lg-2 control-label">Username</label>
+                            <div class="col-lg-8">
+                                <input type="text" required="required" class="form-control" id="inputUser" placeholder="Username" ng-model="login.username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-8">
+                                <input type="password" required="required" class="form-control" id="inputPassword" placeholder="Password" ng-model="login.password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="submit" class="btn btn-primary" ng-disabled="loginFormName.$invalid" ng-click="loginUser(login, loginFormName)">Login</button>
+                                <a href="#register">Register here</a>
+                            </div>
+                            {{user}}
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+            </div>
+        </div>
+    </div>
+</div>
