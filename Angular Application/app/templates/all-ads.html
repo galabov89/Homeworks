@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-8 ads">
             <ul>
-                <li class="container-item" ng-repeat="ad in data.ads">
+                <li class="container-item" ng-repeat="ad in data.ads| orderBy:'-date'">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-7">
